@@ -1,0 +1,32 @@
+.header {
+  border-style: inset;
+  background-color: slategray;
+  font-size: x-large;
+  padding: 10px;
+  border-color: #9c9a9a;
+  font-variant: petite-caps;
+}
+
+.heading {
+  color: #b71f3a;
+  font-size: xx-large;
+  margin: 0px;
+}
+
+.cart-icon {
+  margin: auto;
+  cursor: pointer;
+  color: #b71f3a;
+}
+
+.search-text {
+  width: 70%;
+  border-color: black;
+  outline: none;
+}
+
+.search-button {
+  border-left: 0px;
+  margin-left: -5px;
+  border-color: black;
+}

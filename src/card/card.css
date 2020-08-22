@@ -1,0 +1,19 @@
+.card {
+  align-items: center;
+  padding: 0px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-img-top {
+  width: 210px;
+  height: 270px;
+}
+
+.disable {
+  background-color: lightblue;
+  pointer-events: none;
+  color: black;
+}
