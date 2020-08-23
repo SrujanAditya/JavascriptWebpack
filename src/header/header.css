@@ -1,6 +1,6 @@
 .header {
   border-style: inset;
-  background-color: slategray;
+  background-color: #0a2540;
   font-size: x-large;
   padding: 10px;
   border-color: #9c9a9a;
@@ -8,14 +8,14 @@
 }
 
 .heading {
-  color: #b71f3a;
+  color: white;
   font-size: xx-large;
 }
 
 .cart-icon {
   margin: auto;
   cursor: pointer;
-  color: #b71f3a;
+  color: white;
 }
 
 .search-text {

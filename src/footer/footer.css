@@ -1,10 +1,10 @@
 .footer {
-  background-color: thistle;
+  background-color: #0a2540;
   height: 8.3em;
 }
 
 .text-footer {
   margin: 0px;
   font-size: large;
-  color: darkslategray;
+  color: white;
 }

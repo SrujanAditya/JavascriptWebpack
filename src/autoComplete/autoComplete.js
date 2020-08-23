@@ -1,6 +1,6 @@
 import './autoComplete.css';
 import autoCompleteTemp from './autoComplete.html';
-import { getBookTitleNames } from './../services/fetchDataService';
+import { getBookTitleNames } from './../services/dataService';
 
 export function displayAutoComplete() {
     return autoCompleteTemp;

@@ -9,7 +9,6 @@ export async function fetchBooks() {
             books = data.books;
         });
     generateBookNames();
-    return books;
 }
 
 function generateBookNames(){

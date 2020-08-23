@@ -1,4 +1,4 @@
-import { getBooksData } from './fetchDataService';
+import { getBooksData } from './dataService';
 import { clearAndDisplayCards } from '../cardContainer/cardContainer';
 
 export function searchByName(searchString) {
