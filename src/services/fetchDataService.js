@@ -1,4 +1,5 @@
 let books = [];
+let bookNames= [];
 
 export async function fetchBooks() {
     await fetch(
@@ -7,9 +8,20 @@ export async function fetchBooks() {
         .then((data) => {
             books = data.books;
         });
+    generateBookNames();
     return books;
+}
+
+function generateBookNames(){
+    books.forEach(element => {
+        bookNames.push(element.name);
+    })
 }
 
 export function getBooksData(){
     return books;
+}
+
+export function getBookTitleNames() {
+    return bookNames;
 }

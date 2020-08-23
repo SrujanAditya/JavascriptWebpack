@@ -7,12 +7,14 @@ import { displayHeader,addEventListeners } from "./header/header.js";
 import { displayFooter } from "./footer/footer";
 import { displayCardContainer,displayCards } from './cardContainer/cardContainer'
 import { fetchBooks, getBooksData } from "./services/fetchDataService";
+import { initAutoSuggest } from './autoComplete/autoComplete';
 
 (async function init() {
   setupHTMLBody();
   await fetchBooks();
   displayCards(getBooksData());
   addEventListeners();
+  initAutoSuggest();
 })();
 
 function setupHTMLBody() {

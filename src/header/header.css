@@ -19,7 +19,7 @@
 }
 
 .search-text {
-  width: 70%;
+  width: 100%;
   border-color: black;
   outline: none;
 }
@@ -28,4 +28,15 @@
   border-left: 0px;
   margin-left: -5px;
   border-color: black;
+}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+  width:70%;
+}
+
+.inputContainer {
+  padding:0;
 }

@@ -1,11 +1,13 @@
 import './header.css';
 import header from './header.html';
-import { searchByName } from '../services/searchService';
+import { searchByName } from './../services/searchService';
+import { displayAutoComplete } from './../autoComplete/autoComplete';
 
 export function displayHeader() {
   let headerDiv = document.createElement('header');
   headerDiv.innerHTML = header;
   document.body.appendChild(headerDiv);
+  document.getElementById('inputContainer').innerHTML = displayAutoComplete();
 }
 
 export function addEventListeners() {
