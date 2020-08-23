@@ -1,6 +1,7 @@
 import './card.css';
 import card from './card.html';
 import { DOMStringParser } from './../utils/DOMParser';
+import { addBookToCart } from './../services/cartService';
 
 export function generateCard(book) {
   let newCard = DOMStringParser(card);
@@ -17,6 +18,7 @@ function addToCardButton(newCard, book) {
   if (book.quantity !== 0) {
     addToCart.addEventListener('click', () => {
       addToCart.innerHTML = 'Added to cart';
+      addBookToCart(book);
       addToCart.classList.add('disable');
     });
   }

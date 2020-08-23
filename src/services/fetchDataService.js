@@ -13,4 +13,3 @@ export async function fetchBooks() {
 export function getBooksData(){
     return books;
 }
-
