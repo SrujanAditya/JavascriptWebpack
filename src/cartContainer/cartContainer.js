@@ -3,9 +3,9 @@ import cartContainerTemp from './cartContainer.html';
 import { generateCart, displayTotals } from '../cart/cart';
 
 export function displayCart(cartItems) {
-  let mainContainer = document.getElementById('main');
+  const mainContainer = document.getElementById('main');
   mainContainer.innerHTML = cartContainerTemp;
-  let cartContainer = document.getElementById('cartContainer');
+  const cartContainer = document.getElementById('cartContainer');
   displayTotalIfCartItemsPresent(cartItems);
 
   cartItems.forEach((item) => {

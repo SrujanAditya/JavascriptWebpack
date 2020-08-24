@@ -8,7 +8,7 @@ import { getBooksData } from '../services/dataService';
 import { getCartItems } from '../services/cartService';
 
 export function displayHeader() {
-  let headerDiv = document.createElement('header');
+  const headerDiv = document.createElement('header');
   headerDiv.innerHTML = header;
   document.body.appendChild(headerDiv);
   document.getElementById('inputContainer').innerHTML = displayAutoComplete();

@@ -4,7 +4,7 @@ import { DOMStringParser } from './../utils/DOMParser';
 import { addBookToCart } from './../services/cartService';
 
 export function generateCard(book) {
-  let newCard = DOMStringParser(card);
+  const newCard = DOMStringParser(card);
   newCard.getElementById('image').src = book.img;
   newCard.getElementById('name').textContent = book.name;
   newCard.getElementById('price').textContent = 'Rs: ' + book.price;
@@ -13,7 +13,7 @@ export function generateCard(book) {
 }
 
 function addToCardButton(newCard, book) {
-  let addToCart = newCard.getElementById('add-to-cart');
+  const addToCart = newCard.getElementById('add-to-cart');
   addToCart.textContent = 'Add to cart';
   if (book.cartCount && book.cartCount > 0) {
     updateAddToCart(addToCart, 'Added to cart');

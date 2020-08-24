@@ -4,13 +4,13 @@ import { DOMStringParser } from './../utils/DOMParser';
 import { removeBookFromCart, calculateSubTotal } from '../services/cartService';
 
 export function generateCart(book) {
-  let newCart = DOMStringParser(cart);
+  const newCart = DOMStringParser(cart);
   newCart.getElementById('image').src = book.img;
   newCart.getElementById('book-name').textContent = book.name;
-  let quantity = newCart.getElementById('quantity');
+  const quantity = newCart.getElementById('quantity');
   quantity.textContent = book.cartCount;
-  let price = newCart.getElementById('price');
-  price.textContent = 'Rs: ' + book.price;
+  const price = newCart.getElementById('price');
+  price.textContent = 'Rs: ' + book.price * book.cartCount;
   addEventListeners(newCart, book, quantity, price);
   return newCart.body.firstChild;
 }
@@ -40,7 +40,7 @@ function updateCartItem(book, quantity, price, cartCount = 1) {
 }
 
 export function displayTotals() {
-  let subTotal = calculateSubTotal();
+  const subTotal = calculateSubTotal();
   document.getElementById('subtotal').innerHTML = subTotal;
   document.getElementById('total').innerHTML = `${(+subTotal + 50).toFixed(2)}`;
 }
