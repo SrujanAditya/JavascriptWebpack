@@ -1,0 +1,25 @@
+.cartItem {
+  margin: 0;
+  font-size: large;
+  padding: 0.5em 0;
+  height: fit-content;
+  border-bottom: 0.1em solid lightgray;
+}
+
+.cart-image {
+  margin-left: 2em;
+  width: 2em;
+  height: 2em;
+}
+
+.quantity-number {
+  margin: 1em;
+}
+
+.delete-icon-color {
+  color: red;
+}
+
+.pointer {
+  cursor: pointer;
+}

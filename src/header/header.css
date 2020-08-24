@@ -1,15 +1,17 @@
 .header {
+  margin: 0;
   border-style: inset;
   background-color: #0a2540;
   font-size: x-large;
-  padding: 10px;
-  border-color: #9c9a9a;
+  padding: 0.5em;
+  border: 0.1em solid lightgray;
   font-variant: petite-caps;
 }
 
 .heading {
   color: white;
   font-size: xx-large;
+  cursor: pointer;
 }
 
 .cart-icon {
@@ -24,19 +26,12 @@
   outline: none;
 }
 
-.search-button {
-  border-left: 0px;
-  margin-left: -5px;
-  border-color: black;
-}
-
 .autocomplete {
-  /*the container must be positioned relative:*/
   position: relative;
   display: inline-block;
-  width:70%;
+  width: 70%;
 }
 
 .inputContainer {
-  padding:0;
+  padding: 0;
 }

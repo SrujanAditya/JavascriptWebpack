@@ -1,20 +1,15 @@
-<table>
-  <th>Book name</th>
-  <th>Quantity</th>
-  <th>Price</th>
-  <tr>
-    <img />
-  </tr>
-  <tr>
-    Book name
-  </tr>
-  <tr>
-    Quantity
-  </tr>
-  <tr>
-    Price:
-  </tr>
-  <tr>
-    Delete icon
-  </tr>
-</table>
+<div class="row cartItem">
+  <div class="col-sm-2"><img id="image" class="cart-image" /></div>
+  <div class="col-sm-4" id="book-name"></div>
+  <div class="col-sm-3" id="quantity-block">
+    <span id="minus-button"><i class="fas fa-minus-square pointer"></i></span>
+    <span class="quantity-number" id="quantity">1</span>
+    <span id="plus-button"><i class="fas fa-plus-square pointer"></i></span>
+  </div>
+  <div class="col-sm-2" id="price"></div>
+  <div class="col-sm-1" id="delete-icon">
+    <span id="delete-button"
+      ><i class="fas fa-trash-alt delete-icon-color pointer"></i
+    ></span>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.cartHeader {
+  margin: 0;
+  font-size: x-large;
+  padding: 0.5em 0;
+  border: solid lightgray;
+  height: fit-content;
+}
+
+.cartContainer {
+  width: 100%;
+}
+
+.ml-75 {
+  margin-left: 75%;
+  padding-top: 1em;
+}
+
+.checkout-button {
+  width: 10em;
+  height: 2.5em;
+  color: white;
+  background-color: #0a2540;
+}
+
+.hide {
+  display: none;
+}
+
+.cart-amount {
+  padding-left: 3em;
+  float: right;
+}

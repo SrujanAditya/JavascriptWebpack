@@ -1,6 +1,6 @@
 .card {
   align-items: center;
-  padding: 0px;
+  padding: 0;
 }
 
 .card-body {
@@ -8,12 +8,20 @@
 }
 
 .card-img-top {
-  width: 210px;
-  height: 270px;
+  width: 12em;
+  height: 16em;
+  border: 0.1em solid lightgray;
+}
+
+.add-cart-button,
+.add-cart-button:hover {
+  background-color: #0a2540;
+  color: white;
 }
 
 .disable {
-  background-color: lightblue;
+  background-color: lightgray;
   pointer-events: none;
   color: black;
+  border: 0.1em solid #0a2540;
 }

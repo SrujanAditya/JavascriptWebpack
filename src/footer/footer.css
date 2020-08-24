@@ -4,7 +4,16 @@
 }
 
 .text-footer {
-  margin: 0px;
+  margin: 0;
   font-size: large;
   color: white;
+}
+
+.footer-line {
+  margin-bottom: 0;
+}
+
+a {
+  color: lightgray;
+  padding: 0.5em;
 }
