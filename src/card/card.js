@@ -1,10 +1,10 @@
 import './card.css';
 import card from './card.html';
-import { parseStringToHTML } from './../utils/DOMParser';
+import { parseStringToHtml } from './../utils/DOMParser';
 import { addBookToCart } from './../services/cartService';
 
 export function generateCard(book) {
-  const newCard = parseStringToHTML(card);
+  const newCard = parseStringToHtml(card);
   newCard.getElementById('image').src = book.img;
   newCard.getElementById('name').textContent = book.name;
   newCard.getElementById('price').textContent = 'Rs: ' + book.price;

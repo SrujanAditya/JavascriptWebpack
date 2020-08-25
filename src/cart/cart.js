@@ -1,10 +1,10 @@
 import './cart.css';
 import cart from './cart.html';
-import { parseStringToHTML } from './../utils/DOMParser';
+import { parseStringToHtml } from './../utils/DOMParser';
 import { removeBookFromCart, calculateSubTotal } from '../services/cartService';
 
 export function generateCart(book) {
-  const newCart = parseStringToHTML(cart);
+  const newCart = parseStringToHtml(cart);
   newCart.getElementById('image').src = book.img;
   newCart.getElementById('book-name').textContent = book.name;
   const quantity = newCart.getElementById('quantity');

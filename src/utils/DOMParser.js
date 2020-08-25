@@ -16,6 +16,6 @@ const DOMStringParser = (function () {
   };
 })();
 
-export function parseStringToHTML(string){
-  return DOMStringParser.getParser().parseStringToHTML(string,'text/html');
+export function parseStringToHtml(string){
+  return DOMStringParser.getParser().parseFromString(string,'text/html');
 }
