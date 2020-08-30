@@ -1,4 +1,4 @@
-import {handleError} from "../cardContainer/cardContainer";
+import {handleError} from "./../pageNotFound/pageNotFound";
 
 let books = [];
 const bookNames = [];

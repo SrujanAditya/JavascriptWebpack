@@ -1,6 +1,5 @@
 import {generateCard} from "../card/card";
-import customErrorHtml from "./customError.html";
-import "./customError.css";
+import {handleError} from "../pageNotFound/pageNotFound";
 
 export function displayCards(books) {
   if (books.length > 0) {
@@ -12,9 +11,4 @@ export function displayCards(books) {
   } else {
     handleError();
   }
-}
-
-export function handleError() {
-  const mainContainer = document.getElementById("main");
-  mainContainer.innerHTML = customErrorHtml;
 }

@@ -6,40 +6,64 @@
   padding: 0.5em;
   border: 0.1em solid lightgray;
   font-variant: petite-caps;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .heading {
   color: white;
   font-size: xx-large;
   cursor: pointer;
-}
-
-.cart-icon {
-  margin: auto;
-  cursor: pointer;
-  color: white;
-}
-
-.search-text {
-  width: 100%;
-  border-color: black;
-  outline: none;
-}
-
-.autocomplete {
-  position: relative;
-  display: inline-block;
-  width: 70%;
+  display: flex;
 }
 
 .inputContainer {
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 50%;
+}
+
+.cart-div {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+}
+
+.cart-relative {
+  position: relative;
 }
 
 .cart-count {
-  top: -2em;
-  padding: 3px 5px;
-  background-color: red;
-  border-radius: 50%;
-  font-size: medium;
+  position: absolute;
+  color: red;
+  font-weight: 900;
+  font-size: x-large;
+  left: 1em;
+  top: 0.8em;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .heading {
+    order: 1;
+  }
+
+  .inputContainer {
+    order: 3;
+    flex-basis: 300px;
+    align-self: center;
+  }
+
+  .cart-div {
+    order: 2;
+  }
 }
