@@ -1,14 +1,20 @@
+import {handleError} from "../cardContainer/cardContainer";
+
 let books = [];
-let bookNames = [];
+const bookNames = [];
 
 export async function fetchBooks() {
   await fetch(
-    'https://my-json-server.typicode.com/HarikaAvadutha/JsonBooksData/db'
+      "https://my-json-server.typicode.com/HarikaAvadutha/JsonBooksData/db",
   )
-    .then((response) => response.json())
-    .then((data) => {
-      books = data.books;
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        books = data.books;
+      })
+      .catch((error) => {
+        console.log(error);
+        handleError();
+      });
   generateBookNames();
 }
 

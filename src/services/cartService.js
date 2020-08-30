@@ -1,6 +1,6 @@
-import { displayCart } from '../cartContainer/cartContainer';
+import {displayCart} from "../cartContainer/cartContainer";
 
-let cartItems = [];
+const cartItems = [];
 
 export function addBookToCart(book, count = 1) {
   book.cartCount += count;

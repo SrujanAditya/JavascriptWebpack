@@ -1,11 +1,11 @@
-import './cartContainer.css';
-import cartContainerTemp from './cartContainer.html';
-import { generateCart, displayTotals } from '../cart/cart';
+import "./cartContainer.css";
+import cartContainerTemp from "./cartContainer.html";
+import {generateCart, displayTotals} from "../cart/cart";
 
 export function displayCart(cartItems) {
-  const mainContainer = document.getElementById('main');
+  const mainContainer = document.getElementById("main");
   mainContainer.innerHTML = cartContainerTemp;
-  const cartContainer = document.getElementById('cartContainer');
+  const cartContainer = document.getElementById("cartContainer");
   displayTotalIfCartItemsPresent(cartItems);
 
   cartItems.forEach((item) => {
@@ -16,6 +16,6 @@ export function displayCart(cartItems) {
 
 function displayTotalIfCartItemsPresent(cartItems) {
   if (!cartItems.length) {
-    document.getElementById('checkout-details').classList.add('hide');
+    document.getElementById("checkout-details").classList.add("hide");
   }
 }

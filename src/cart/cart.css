@@ -23,3 +23,15 @@
 .pointer {
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .cartItem {
+    text-align: center;
+  }
+
+  .cart-image{
+    margin: 0;
+    width: 5em;
+    height: 7em;
+  }
+}

@@ -35,3 +35,11 @@
 .inputContainer {
   padding: 0;
 }
+
+.cart-count {
+  top: -2em;
+  padding: 3px 5px;
+  background-color: red;
+  border-radius: 50%;
+  font-size: medium;
+}

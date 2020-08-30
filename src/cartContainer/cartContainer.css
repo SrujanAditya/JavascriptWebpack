@@ -10,7 +10,7 @@
   width: 100%;
 }
 
-.ml-75 {
+.checkout-amount {
   margin-left: 75%;
   padding-top: 1em;
 }
@@ -29,4 +29,14 @@
 .cart-amount {
   padding-left: 3em;
   float: right;
+}
+
+@media screen and (max-width: 768px) {
+  .checkout-amount {
+    margin: auto;
+  }
+
+  .cartHeader {
+    text-align: center;
+  }
 }

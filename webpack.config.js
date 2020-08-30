@@ -1,8 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -20,6 +23,39 @@ module.exports = {
       filename: 'index.html',
     }),
   ],
+  optimization: {
+    minimizer: [
+      // new UglifyJsPlugin({
+      //   cache: true,
+      //   parallel: true,
+      //   extractComments: true,
+      // }),
+      new TerserPlugin({
+        parallel: true,
+        terserOptions: {
+          ecma: 6,
+        },
+      }),
+    ], splitChunks: {
+      chunks: 'all',
+    },
+  },
+  // resolve: {
+  //   alias: {
+  //     fontawesomeCSS: path.resolve(
+  //       __dirname,
+  //       'node_modules/@fortawesome/fontawesome-free/css/all.css'
+  //     ),
+  //     fontawesomeJS: path.resolve(
+  //       __dirname,
+  //       'node_modules/@fortawesome/fontawesome-free/js/all.js'
+  //     ),
+  //     bootstrap: path.resolve(
+  //       __dirname,
+  //       'node_modules/bootstrap/dist/css/bootstrap.min.css'
+  //     ),
+  //   },
+  // },
   module: {
     rules: [
       {
@@ -38,14 +74,14 @@ module.exports = {
         test: /\.(svg|eot|woff|woff2|ttf)$/,
         use: ['file-loader'],
       },
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: 'eslint-loader',
-      //   options: {
-      //     emitError: true,
-      //   },
-      // },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          fix: true,
+        },
+      },
     ],
   },
 };

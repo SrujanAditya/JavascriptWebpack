@@ -25,3 +25,9 @@
   color: black;
   border: 0.1em solid #0a2540;
 }
+
+@media screen and (max-width: 768px) {
+  .card-img-top {
+    width: 9em;
+  }
+}
