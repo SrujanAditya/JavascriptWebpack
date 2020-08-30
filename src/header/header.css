@@ -48,7 +48,7 @@
   top: 0.8em;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
   .header {
     display: flex;
     flex-wrap: wrap;
